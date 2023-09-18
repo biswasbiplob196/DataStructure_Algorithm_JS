@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Link List</title>
+    <script>
+        // let x = {name: "biplob"};
+        // let y = x;
+        // y.name = "bb"
+        // console.log(x)
+        class List {
+            constructor(element)  {
+                this.head = {
+                    value: element,
+                    next: null
+                };
+                this.tail = this.head;
+            }
+            appendNode (newData){
+                let newNode = {
+                    value: newData,
+                    next: null 
+                }
+                this.tail.next = newNode;
+            }
+        };
+
+        let list = new List(100);
+        list.appendNode(200)
+        console.log(list);
+    </script>
+</head>
+<body>
+    <h1>Add Link List</h1>
+</body>
+</html>
