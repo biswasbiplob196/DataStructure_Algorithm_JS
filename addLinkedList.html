@@ -9,6 +9,8 @@
         // let y = x;
         // y.name = "bb"
         // console.log(x)
+        
+        // linked list Creation
         class List {
             constructor(element)  {
                 this.head = {
@@ -16,6 +18,7 @@
                     next: null
                 };
                 this.tail = this.head;
+                this.size = 1;
             }
             appendNode (newData){
                 let newNode = {
@@ -23,12 +26,24 @@
                     next: null 
                 }
                 this.tail.next = newNode;
+                this.size += 1; 
+            }
+            travarsing () {
+            let counter = 0;
+            let currentNode = this.head;
+
+            while(counter < this.size){
+                console.log(currentNode);
+                currentNode = currentNode.next;  
+                counter++;
+            }
             }
         };
 
         let list = new List(100);
         list.appendNode(200)
-        console.log(list);
+        // console.log(list);
+        list.travarsing();
     </script>
 </head>
 <body>
